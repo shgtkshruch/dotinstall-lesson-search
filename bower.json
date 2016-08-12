@@ -1,0 +1,7 @@
+{
+  "name": "dotinstall-lesson-search",
+  "dependencies": {
+    "react": "^15.3.0",
+    "fetch": "^1.0.0"
+  }
+}

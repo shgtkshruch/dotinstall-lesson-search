@@ -1,0 +1,31 @@
+doctype html
+html(lang="ja")
+  head
+    meta(charset='UTF-8')
+    title dotinstall-lesson-search
+    meta(content='IE=edge', http-equiv='X-UA-Compatible')
+    meta(content='author', name='author')
+    meta(content='description', name='description')
+    meta(content='keywords', name='keywords')
+    meta(content='width=device-width, initial-scale=1' name='viewport')
+    meta(content='telephone=no', name='format-detection')
+    // build:css styles/vendor.css
+    // bower:css
+    // endbower
+    // endbuild
+    // build:css styles/main.css
+    link(rel='stylesheet', href='styles/main.css', media='all')
+    // endbuild
+  body
+    #react
+    // build:js scripts/vendor.js
+    // bower:js
+    script(src='../bower_components/react/react.js')
+    script(src='../bower_components/react/react-dom.js')
+    script(src='../bower_components/fetch/fetch.js')
+    // endbower
+    // endbuild
+    // build:js scripts/main.js
+    script(src='scripts/helloworld.js')
+    script(src='scripts/main.js')
+    // endbuild
