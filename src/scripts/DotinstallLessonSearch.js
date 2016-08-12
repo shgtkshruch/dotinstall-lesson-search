@@ -18,7 +18,7 @@ const DotinstallLessonSearch = React.createClass({
 
   render() {
     return (
-      <ul>
+      <ul className="lesson">
         {this.state.data.map((lesson, index) => {
           return <Lesson key={index} lesson={lesson} />
         })}

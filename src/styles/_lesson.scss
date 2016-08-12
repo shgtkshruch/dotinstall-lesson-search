@@ -1,0 +1,10 @@
+.lesson {
+  max-width: 500px;
+  margin: 0 auto;
+  &__item {
+    text-align: center;
+  }
+  &__content {
+    display: none;
+  }
+}
