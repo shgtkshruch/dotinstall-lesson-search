@@ -81,7 +81,7 @@ gulp.task('sass', () => {
 });
 
 gulp.task('js', () => {
-  return gulp.src('src/scripts/*.js')
+  return gulp.src('src/scripts/**/*.js')
     .pipe($.plumber())
     .pipe($.changed('dist', {
       extension: '.js'
@@ -121,7 +121,7 @@ gulp.task('ghpages', () => {
 gulp.task('watch', () => {
   gulp.watch('src/**/*.pug', ['pug']);
   gulp.watch('src/styles/*.scss', ['sass']);
-  gulp.watch('src/scripts/*.js', ['js']);
+  gulp.watch('src/scripts/**/*.js', ['js']);
   gulp.watch('src/images/*', ['image']);
 });
 

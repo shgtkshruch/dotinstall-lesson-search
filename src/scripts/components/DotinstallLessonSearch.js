@@ -1,20 +1,8 @@
 const DotinstallLessonSearch = React.createClass({
   getInitialState() {
     return {
-      data: [],
       filterText: ''
     };
-  },
-
-  componentDidMount() {
-    fetch(this.props.url)
-      .then(res => {
-        return res.json();
-      }).then(json => {
-        this.setState({
-          data: json
-        });
-      });
   },
 
   handleChange(e) {
@@ -25,11 +13,11 @@ const DotinstallLessonSearch = React.createClass({
 
   render() {
     var lessons = [];
-    this.state.data.forEach((lesson, index) => {
+    this.props.route.data.forEach((lesson, index) => {
       if (lesson.name.toLowerCase().indexOf(this.state.filterText) === -1) {
         return;
       }
-      lessons.push(<Lesson key={index} lesson={lesson} />);
+      lessons.push(<LessonComponent key={index} lesson={lesson} />);
     });
 
     return (
